@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compras - GlamourBeauty</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/Css/Style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">GlamourBeauty</div>
+            <ul class="nav-links">
+                <li><a href="Index.html" id="link-inicio">Inicio</a></li>
+                <li><a href="productos.html" id="link-productos">Productos</a></li>
+                <li><a href="acercade.html" id="link-acercade">Acerca de</a></li>
+                <li><a href="contacto.html" id="link-contacto">Contacto</a></li>
+            </ul>
+            <div class="navbar-icons">
+                <div class="search-icon" id="search-btn">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-icon" id="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </div>
+                <div class="user-icon" id="user-btn">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="content-area">
+        <section class="purchases-section">
+            <h1>Mi Carrito de Compras</h1>
+            
+            <div class="purchases-container">
+                <div class="cart-items-container">
+                    <h2>Artículos en tu Carrito</h2>
+                    <div class="cart-items-list" id="cart-items">
+                        <p class="empty-cart">Tu carrito está vacío. <a href="productos.html">Continúa comprando</a></p>
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <h2>Resumen de Compra</h2>
+                    
+                    <div class="summary-item">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span>Envío:</span>
+                        <span id="shipping">$0.00</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span>Impuesto (IVA 21%):</span>
+                        <span id="tax">$0.00</span>
+                    </div>
+                    
+                    <div class="summary-item total">
+                        <span>Total:</span>
+                        <span id="total">$0.00</span>
+                    </div>
+                    
+                    <div class="shipping-options">
+                        <h3>Opciones de Envío</h3>
+                        <label>
+                            <input type="radio" name="shipping" value="standard" checked>
+                            Envío Estándar (3-5 días) - Gratis
+                        </label>
+                        <label>
+                            <input type="radio" name="shipping" value="express">
+                            Envío Express (24-48 horas) - $9.99
+                        </label>
+                    </div>
+                    
+                    <button class="checkout-btn">Proceder al Pago</button>
+                    <a href="productos.html" class="continue-shopping">Continuar Comprando</a>
+                </div>
+            </div>
+            
+            <section class="payment-methods">
+                <h2>Métodos de Pago Aceptados</h2>
+                <div class="payment-icons">
+                    <div class="payment-method">
+                        <i class="fab fa-cc-visa"></i>
+                        <p>Tarjeta de Crédito</p>
+                    </div>
+                    <div class="payment-method">
+                        <i class="fab fa-cc-paypal"></i>
+                        <p>PayPal</p>
+                    </div>
+                    <div class="payment-method">
+                        <i class="fas fa-university"></i>
+                        <p>Transferencia Bancaria</p>
+                    </div>
+                    <div class="payment-method">
+                        <i class="fas fa-money-bill-alt"></i>
+                        <p>Contra Reembolso</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GlamourBeauty</h3>
+                <p>Tu tienda de belleza en línea de confianza.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="Index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="acercade.html">Acerca de</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contáctanos</h3>
+                <p>Email: info@glamourbeauty.com</p>
+                <p>Teléfono: +34 123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GlamourBeauty. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/Js/script.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            renderCart();
+        });
+        
+        // Event listeners para opciones de envío
+        document.querySelectorAll('input[name="shipping"]').forEach(radio => {
+            radio.addEventListener('change', renderCart);
+        });
+        
+        // Event listener para el botón de checkout
+        document.querySelector('.checkout-btn').addEventListener('click', function() {
+            if (state.cart.length === 0) {
+                alert('Tu carrito está vacío');
+                return;
+            }
+            alert('¡Gracias por tu compra! \n\nTotal: ' + formatPrice(cartTotal()));
+            state.cart = [];
+            localStorage.setItem('cart', JSON.stringify(state.cart));
+            renderCart();
+        });
+    </script>
+</html>

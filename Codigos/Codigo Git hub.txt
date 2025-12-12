@@ -1,0 +1,91 @@
+MARIA@MARIA-MACIALEAL MINGW64 ~/OneDrive/Documentos/Seminario Programacion Basica/Modulo programacion Basica/Practica laboratorios Google Drive/Retos/Seccion 30 - Reto 5 (main)
+$ cd "c:\Users\MARIA\OneDrive\Documentos\Seminario Programacion Basica\Modulo programacion Basica\Practica laboratorios Google Drive\Retos\Seccion 30 - Reto 5" && git status
+On branch main
+nothing to commit, working tree clean
+
+MARIA@MARIA-MACIALEAL MINGW64 ~/OneDrive/Documentos/Seminario Programacion Basica/Modulo programacion Basica/Practica laboratorios Google Drive/Retos/Seccion 30 - Reto 5 (main)
+$ ^C
+
+MARIA@MARIA-MACIALEAL MINGW64 ~/OneDrive/Documentos/Seminario Programacion Basica/Modulo programacion Basica/Practica laboratorios Google Drive/Retos/Seccion 30 - Reto 5 (main)
+$ cd "c:\Users\MARIA\OneDrive\Documentos\Seminario Programacion Basica\Modulo programacion Basica\Practica laboratorios Google Drive\Retos\Seccion 30 - Reto 5" && git remote -v
+origin  https://github.com/marialeal3231-commits/E-commerce-proyecto-interfaz.git (fetch)
+origin  https://github.com/marialeal3231-commits/E-commerce-proyecto-interfaz.git (push)
+
+MARIA@MARIA-MACIALEAL MINGW64 ~/OneDrive/Documentos/Seminario Programacion Basica/Modulo programacion Basica/Practica laboratorios Google Drive/Retos/Seccion 30 - Reto 5 (main)
+$ cd "c:\Users\MARIA\OneDrive\Documentos\Seminario Programacion Basica\Modulo programacion Basica\Practica laboratorios Google Drive\Retos\Seccion 30 - Reto 5" && git log --oneline -5
+9cfa306 (HEAD -> main) GlamourBeauty
+
+MARIA@MARIA-MACIALEAL MINGW64 ~/OneDrive/Documentos/Seminario Programacion Basica/Modulo programacion Basica/Practica laboratorios Google Drive/Retos/Seccion 30 - Reto 5 (main)
+$ ^C
+
+MARIA@MARIA-MACIALEAL MINGW64 ~/OneDrive/Documentos/Seminario Programacion Basica/Modulo programacion Basica/Practica laboratorios Google Drive/Retos/Seccion 30 - Reto 5 (main)
+$ cd "c:\Users\MARIA\OneDrive\Documentos\Seminario Programacion Basica\Modulo programacion Basica\Practica laboratorios Google Drive\Retos\Seccion 30 - Reto 5" && git branch -a
+* main
+
+MARIA@MARIA-MACIALEAL MINGW64 ~/OneDrive/Documentos/Seminario Programacion Basica/Modulo programacion Basica/Practica laboratorios Google Drive/Retos/Seccion 30 - Reto 5 (main)
+$ cd "c:\Users\MARIA\OneDrive\Documentos\Seminario Programacion Basica\Modulo programacion Basica\Practica laboratorios Google Drive\Retos\Seccion 30 - Reto 5" && git config --list | findstr remote     
+remote.origin.url=https://github.com/marialeal3231-commits/E-commerce-proyecto-interfaz.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+MARIA@MARIA-MACIALEAL MINGW64 ~/OneDrive/Documentos/Seminario Programacion Basica/Modulo programacion Basica/Practica laboratorios Google Drive/Retos/Seccion 30 - Reto 5 (main)
+$ cd "c:\Users\MARIA\OneDrive\Documentos\Seminario Programacion Basica\Modulo programacion Basica\Practica laboratorios Google Drive\Retos\Seccion 30 - Reto 5" && git push -u origin main 2>&1
+To https://github.com/marialeal3231-commits/E-commerce-proyecto-interfaz.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/marialeal3231-commits/E-commerce-proyecto-interfaz.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+MARIA@MARIA-MACIALEAL MINGW64 ~/OneDrive/Documentos/Seminario Programacion Basica/Modulo programacion Basica/Practica laboratorios Google Drive/Retos/Seccion 30 - Reto 5 (main)
+$ cd "c:\Users\MARIA\OneDrive\Documentos\Seminario Programacion Basica\Modulo programacion Basica\Practica laboratorios Google Drive\Retos\Seccion 30 - Reto 5" && git pull origin main
+remote: Enumerating objects: 125, done.
+remote: Counting objects: 100% (125/125), done.
+remote: Compressing objects: 100% (105/105), done.
+remote: Total 125 (delta 55), reused 34 (delta 6), pack-reused 0 (from 0)
+Receiving objects: 100% (125/125), 7.20 MiB | 1.29 MiB/s, done.
+Resolving deltas: 100% (55/55), done.
+From https://github.com/marialeal3231-commits/E-commerce-proyecto-interfaz
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+fatal: refusing to merge unrelated histories
+
+MARIA@MARIA-MACIALEAL MINGW64 ~/OneDrive/Documentos/Seminario Programacion Basica/Modulo programacion Basica/Practica laboratorios Google Drive/Retos/Seccion 30 - Reto 5 (main)
+$ cd "c:\Users\MARIA\OneDrive\Documentos\Seminario Programacion Basica\Modulo programacion Basica\Practica laboratorios Google Drive\Retos\Seccion 30 - Reto 5" && git pull origin main --allow-unrelated-
+histories
+From https://github.com/marialeal3231-commits/E-commerce-proyecto-interfaz
+ * branch            main       -> FETCH_HEAD
+Auto-merging acercade.html
+CONFLICT (add/add): Merge conflict in acercade.html
+Auto-merging assets/Css/Style.css
+CONFLICT (add/add): Merge conflict in assets/Css/Style.css
+Auto-merging assets/Js/script.js
+CONFLICT (add/add): Merge conflict in assets/Js/script.js
+Auto-merging compras.html
+CONFLICT (add/add): Merge conflict in compras.html
+Auto-merging contacto.html
+CONFLICT (add/add): Merge conflict in contacto.html
+
+MARIA@MARIA-MACIALEAL MINGW64 ~/OneDrive/Documentos/Seminario Programacion Basica/Modulo programacion Basica/Practica laboratorios Google Drive/Retos/Seccion 30 - Reto 5 (main|MERGING)
+$ cd "c:\Users\MARIA\OneDrive\Documentos\Seminario Programacion Basica\Modulo programacion Basica\Practica laboratorios Google Drive\Retos\Seccion 30 - Reto 5" && git checkout --ours acercade.html assets/Css/Style.css assets/Js/script.js compras.html contacto.html productos.html       
+Updated 6 paths from the index
+
+MARIA@MARIA-MACIALEAL MINGW64 ~/OneDrive/Documentos/Seminario Programacion Basica/Modulo programacion Basica/Practica laboratorios Google Drive/Retos/Seccion 30 - Reto 5 (main|MERGING)
+$ cd "c:\Users\MARIA\OneDrive\Documentos\Seminario Programacion Basica\Modulo programacion Basica\Practica laboratorios Google Drive\Retos\Seccion 30 - Reto 5" && git add acercade.html assets/Css/Style.css assets/Js/script.js compras.html contacto.html productos.html && git commit -m "Merge remote changes: Resolving conflicts - Keep local version with all pages, icons and fixes"
+[main 366d876] Merge remote changes: Resolving conflicts - Keep local version with all pages, icons and fixes
+
+MARIA@MARIA-MACIALEAL MINGW64 ~/OneDrive/Documentos/Seminario Programacion Basica/Modulo programacion Basica/Practica laboratorios Google Drive/Retos/Seccion 30 - Reto 5 (main)
+$ cd "c:\Users\MARIA\OneDrive\Documentos\Seminario Programacion Basica\Modulo programacion Basica\Practica laboratorios Google Drive\Retos\Seccion 30 - Reto 5" && git push origin main
+Enumerating objects: 62, done.
+Counting objects: 100% (62/62), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (53/53), done.
+Writing objects: 100% (55/55), 7.76 MiB | 436.00 KiB/s, done.
+Total 55 (delta 7), reused 1 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (7/7), completed with 3 local objects.
+To https://github.com/marialeal3231-commits/E-commerce-proyecto-interfaz.git
+   9ded872..366d876  main -> main
+
+MARIA@MARIA-MACIALEAL MINGW64 ~/OneDrive/Documentos/Seminario Programacion Basica/Modulo programacion Basica/Practica laboratorios Google Drive/Retos/Seccion 30 - Reto 5 (main)
+$
